@@ -95,3 +95,16 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
+  document.getElementById("subscribeForm").addEventListener("submit", function (e) {
+    let emailInput = document.getElementById("emailInput");
+    let errorMessage = document.getElementById("errorMessage");
+
+    if (emailInput.value.trim() === "") {
+      e.preventDefault(); // Prevent form submission
+      errorMessage.style.display = "block"; // Show custom message
+      emailInput.focus();
+    } else {
+      errorMessage.style.display = "none"; // Hide message when valid
+    }
+  });
+

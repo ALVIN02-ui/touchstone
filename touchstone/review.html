@@ -301,11 +301,12 @@
             <h4>
               Newsletter
             </h4>
-            <form action="#">
-              <input type="text" placeholder="Enter email" />
+            <form id="subscribeForm">
+              <input type="email" id="emailInput" placeholder="Enter email"required/>
               <button type="submit">
                 Subscribe
               </button>
+              <p id="errorMessage" style="color:#742c36; display:none;">Please fill</p>
             </form>
           </div>
         </div>
@@ -331,10 +332,7 @@
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+  
 
 </body>
 
