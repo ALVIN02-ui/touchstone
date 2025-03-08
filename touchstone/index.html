@@ -13,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Bostorek</title>
+  <title>BookHaven Bookstore</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -63,10 +63,24 @@
                 <a class="nav-link" href="review.html"> Review </a>
               </li>
             </ul>
-            <div id="cart" class="user_option" data-totalitems="0">
-              <a href="Gallery.html">
+            <!-- Cart Icon in Header -->
+             <div id="cart" class="user_option" data-totalitems="0">
+              <a href="#" id="cartIcon">
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <span id="cartCount">0</span>
               </a>
+            </div>
+            <!-- Cart Modal -->
+             <div id="cartModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Your Cart</h2>
+                <ul id="cartItems"></ul>
+                <div class="cart-actions">
+                  <button id="clearCart">Clear Cart</button>
+                  <button id="processOrder">Process Order</button>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -92,7 +106,7 @@
                     <p>
                       Take advantage of our daily deals, discounts, and coupons to maximize your savings on books and stationary Affordable offers.
                     </p>
-                    <a href="">
+                    <a href="Gallery.html">
                       Shop Now 
                     </a>
                   </div>

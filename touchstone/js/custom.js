@@ -1,22 +1,81 @@
-//cart
-$(document).ready(function(){
-    $('#addtocart').on('click',function(){
-      
-      var button = $(this);
-      var cart = $('#cart');
-      var cartTotal = cart.attr('data-totalitems');
-      var newCartTotal = parseInt(cartTotal) + 1;
-      
-      button.addClass('sendtocart');
-      setTimeout(function(){
-        button.removeClass('sendtocart');
-        cart.addClass('shake').attr('data-totalitems', newCartTotal);
-        setTimeout(function(){
-          cart.removeClass('shake');
-        },500)
-      },1000)
-    })
-  })
+// Initialize cart
+let cart = [];
+
+// Update Cart Display
+function updateCart() {
+  const cartCount = document.getElementById("cartCount");
+  const cartItemsContainer = document.getElementById("cartItems");
+
+  cartCount.textContent = cart.length;
+  cartCount.style.display = cart.length > 0 ? "inline-block" : "none";
+
+  // Update modal cart items
+  cartItemsContainer.innerHTML = "";
+  cart.forEach((item, index) => {
+    let li = document.createElement("li");
+    li.innerHTML = `<strong>${item.name}</strong> - ${item.desc} - <span>$${item.price}</span> 
+                    <button onclick="removeFromCart(${index})">Remove</button>`;
+    cartItemsContainer.appendChild(li);
+  });
+}
+
+// Add to Cart Function
+document.querySelectorAll(".cart-button").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    let card = this.closest(".card");
+    let itemName = card.querySelector(".title span").textContent;
+    let itemDesc = card.querySelector(".card-subtitle").textContent;
+    let itemPrice = card.querySelector(".price").textContent.replace("$", "");
+
+    cart.push({ name: itemName, desc: itemDesc, price: itemPrice });
+
+    alert("Item added!");
+    updateCart();
+  });
+});
+
+// Remove Item from Cart
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+// Open Cart Modal
+document.getElementById("cartIcon").addEventListener("click", function () {
+  document.getElementById("cartModal").style.display = "block";
+});
+
+// Close Cart Modal
+document.querySelector(".close").addEventListener("click", function () {
+  document.getElementById("cartModal").style.display = "none";
+});
+
+// Clear Cart
+document.getElementById("clearCart").addEventListener("click", function () {
+  cart = [];
+  updateCart();
+  alert("Cart cleared!");
+});
+
+// Process Order
+document.getElementById("processOrder").addEventListener("click", function () {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+  } else {
+    alert("Thank you for your order!");
+    cart = [];
+    updateCart();
+  }
+});
+
+// Close modal when clicking outside
+window.addEventListener("click", function (event) {
+  let modal = document.getElementById("cartModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 // to get current year
 function getYear() {
     var currentDate = new Date();

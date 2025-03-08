@@ -58,6 +58,29 @@ body {
           align-items: center;
   text-align: center;
 }
+/* HEADER STYLES */
+.header_section {
+  background-color: #2E2E4E; /* Dark theme */
+  padding: 15px 0;
+}
+
+/* NAV-LINK STYLING */
+.navbar-nav .nav-link {
+  color: black !important;
+  font-size: 16px;
+  padding: 8px 15px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* HOVER EFFECT */
+.navbar-nav .nav-link:hover {
+  background-color: black;
+  color: white !important;
+  padding: 8px 15px;
+}
+
+
 
 a,
 a:hover,
@@ -165,7 +188,69 @@ a:focus {
   font-size: 24px;
   font-weight: bold;
 }
+/* Cart Icon Badge */
+#cart {
+  position: relative;
+  cursor: pointer;
 }
+
+#cartCount {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #5c5c5c;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 3px 7px;
+  display: none;
+}
+
+/* Cart Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background:white;
+  padding: 20px;
+  margin: 15% auto;
+  width: 50%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.cart-actions button {
+  margin: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#clearCart {
+  background: #2E2E4E;
+  color: white;
+}
+
+#processOrder {
+  background: #2e2e4e;
+  color: white;
+}
+
 .navbar-brand span {
   color: #2e2e4e;
 }
@@ -683,7 +768,55 @@ width: 1rem;
   color: #5c2e5c;
   font-size: 28px;
 }
+/* MODAL CART */
+#cart-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  z-index: 1000;
+}
 
+#cart-modal h2 {
+  margin-bottom: 15px;
+}
+
+#cart-items {
+  margin-bottom: 15px;
+}
+
+.modal-btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-btn:hover {
+  background-color: #cc5500;
+}
+
+/* BACKDROP */
+#cart-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 .blog_section {
   background-color: #f5f6f9;
 }
