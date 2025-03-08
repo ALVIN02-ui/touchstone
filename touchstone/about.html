@@ -91,7 +91,7 @@
   <!-- about section -->
 
   <section class="about_section layout_padding">
-    <div class="container ">
+    <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
@@ -101,26 +101,32 @@
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>
-                About Our Bookstore
-              </h2>
+              <h2>About Our Bookstore</h2>
             </div>
             <p>
-              At cumque tenetur iste molestiae, vel eum reiciendis assumenda! Numquam, repudiandae. Consequuntur obcaecati recusandae aliquam, amet doloribus eius dolores officiis cumque? Quibusdam praesentium pariatur sapiente mollitia, amet hic iusto voluptas! Iusto quo earum vitae excepturi, ipsam aliquid deleniti assumenda culpa deserunt.
-            </p>
-            <a href="">
-              Read More
-            </a>
+              Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering literary exploration and a love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of words. Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. Its target audience comprises avid readers, students, and individuals in search of high-quality reading materials and office essentials. Book Haven Bookstore’s website theme revolves around celebrating the written word, creating an inviting digital space that encourages literary discovery, and supporting intellectual growth. </p>
+            
+            <!-- Hidden content for hours of operation -->
+            <div id="moreContent" class="hidden">
+              <h4>Hours of Operation:</h4>
+              <p>
+                <strong>Monday-Friday</strong>: 9 a.m. to 8 p.m.<br>
+                <strong>Saturday:</strong> 10 a.m. to 6 p.m.<br>
+                <strong>Sunday:</strong> 11 a.m. to 5 p.m.
+              </p>
+            </div>
+            
+            <a href="#" id="readMoreBtn">Read More</a>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- end about section -->
    <!-- contact section -->
 
-  <section class="contact_section layout_padding">
+   <section class="contact_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6 ">
@@ -129,21 +135,25 @@
               Contact Us
             </h2>
           </div>
-          <form action="#">
+          <form id="contactForm">
             <div>
-              <input type="text" placeholder="Name" />
+              <input type="text" id="name" placeholder="Name" required />
+              <small class="error-message"></small>
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input type="email" id="email" placeholder="Email" required />
+              <small class="error-message"></small>
             </div>
             <div>
-              <input type="text" placeholder="Phone Number" />
+              <input type="text" id="phone" placeholder="Phone Number" required />
+              <small class="error-message"></small>
             </div>
             <div>
-              <input type="text" class="message-box" placeholder="Message" />
+              <input type="text" class="message-box" placeholder="Message/Feedback" required></textarea>
+              <small class="error-message"></small>
             </div>
             <div class="btn-box">
-              <button>
+              <button type="submit">
                 SEND
               </button>
             </div>
@@ -157,7 +167,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- end contact section -->
 
    <!-- info section -->

@@ -86,25 +86,51 @@ function getYear() {
 getYear();
 
 
-/** google_map js **/
-function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
-        zoom: 18,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
-
-  document.getElementById("subscribeForm").addEventListener("submit", function (e) {
-    let emailInput = document.getElementById("emailInput");
-    let errorMessage = document.getElementById("errorMessage");
-
-    if (emailInput.value.trim() === "") {
-      e.preventDefault(); // Prevent form submission
-      errorMessage.style.display = "block"; // Show custom message
-      emailInput.focus();
+document.getElementById("readMoreBtn").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+  let moreContent = document.getElementById("moreContent");
+  
+  if (moreContent.style.display === "none" || moreContent.style.display === "") {
+    moreContent.style.display = "block";
+    this.textContent = "Read Less"; // Change button text
+  } else {
+    moreContent.style.display = "none";
+    this.textContent = "Read More"; // Revert button text
+  }
+});
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form from submitting
+  
+  let isValid = true;
+  const fields = [
+    { id: "name", message: "Please enter your name" },
+    { id: "email", message: "Please enter a valid email" },
+    { id: "phone", message: "Please enter your phone number" },
+    { id: "message", message: "Please enter your message" }
+  ];
+  
+  fields.forEach(field => {
+    const input = document.getElementById(field.id);
+    const errorMessage = input.nextElementSibling;
+    
+    if (input.value.trim() === "") {
+      errorMessage.textContent = field.message;
+      errorMessage.style.display = "block";
+      isValid = false;
     } else {
-      errorMessage.style.display = "none"; // Hide message when valid
+      errorMessage.style.display = "none";
     }
   });
+  
+  if (isValid) {
+    alert("Form submitted successfully!"); // Replace this with an actual form submission action
+    this.submit();
+  }
+});
+function addToCart(itemId, itemName, itemPrice) {
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+  cart.push({ id: itemId, name: itemName, price: itemPrice });
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+}
+
 
