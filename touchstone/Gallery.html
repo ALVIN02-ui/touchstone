@@ -8,7 +8,7 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <link rel="icon" href="images/Client3_LogoPalette2_2E2E4E.png" type="image/gif" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -76,8 +76,8 @@
                 <h2>Your Cart</h2>
                 <ul id="cartItems"></ul>
                 <div class="cart-actions">
-                  <button id="clearCart">Clear Cart</button>
-                  <button id="processOrder">Process Order</button>
+                  <button id="clearCart" onclick="clearCart()">Clear Cart</button>
+                  <button id="processOrder" onclick="processOrder()">Process Order</button>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@
             Books Categories
           </h2>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            We offer a wide wide range products.
           </p>
         </div>
         <div class="row">
@@ -110,80 +110,26 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Textbooks
+                  Books
                 </h5>
                 <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
+                  Fact that a reader will be distracted by the readable content of a page when looking at its layout.
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/cat2.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Science
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/cat3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  History
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/cat4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Biography
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 ">
+          
+           <div class="col-sm-6 col-md-4 ">
             <div class="box ">
               <div class="img-box">
                 <img src="images/cat5.png" alt="">
               </div>
-              <div class="detail-box">
+              <div class="detail-box"> 
                 <h5>
-                  Adventure
+                  Magazines
                 </h5>
                 <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
+                  Get your favourite magazine to suit your needs
                 </p>
               </div>
             </div>
@@ -195,12 +141,10 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Fantasy
+                  Accessories
                 </h5>
                 <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
+                  Keep your place in style with bookmarks featuring beautiful designs, literary quotes, and unique materials like leather, metal, or magnetic clips.
                 </p>
               </div>
             </div>
@@ -220,15 +164,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Tote Bag</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A canvas tote bag with black lettering that says ALL I DO IS READ READ READ</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$11.99</span>
+          <span class="strike-price">$29.99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button"onclick="addToCart(1, 'Tote Bag', 29.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -243,15 +187,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Stickers</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A set of four Book Haven Bookstore stickers that promote reading</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$1.99</span>
+          <span class="strike-price">$2.99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button"onclick="addToCart(1, 'Stickers', 1.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -266,15 +210,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Bookhaven Notebook</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A notebook with text on the cover that says Book Haven Bookstore</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$19.99</span>
+          <span class="strike-price">$49.99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button"onclick="addToCart(1, 'BookhavenNotebook', 39.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -289,15 +233,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>EAT</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A magazine for foodies</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$49.99</span>
+          <span class="strike-price">$99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button"onclick="addToCart(1, 'eat', 49.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -312,15 +256,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Travel</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A magazine for travellers</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$18.99</span>
+          <span class="strike-price">$29.99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button" onclick="addToCart(1, 'Travel', 29.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -335,15 +279,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>BALL</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A magazine about pickleball.</div>
       <div class="action">
         <div class="price-container">
           <span class="price">$199</span>
           <span class="strike-price">$299</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button"onclick="addToCart(1, 'BALL', 199)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -358,15 +302,15 @@
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Sorcerer’s Shadowed Chronicles</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A fantasy book</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$29.99</span>
+          <span class="strike-price">$39.90</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button" onclick="addToCart(1, 'Sorcerer’s Shadowed Chronicles', 29.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -376,20 +320,20 @@
     </div>
     <div class="card">
       <div class="image_container">
-        <p class="tag">-10%</p>
+        <p class="tag">-30%</p>
         <img src="./images/Client3_Book2.png" alt="Product Image" class="image-placeholder" />
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Glory Riders</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A book about riders</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$19.99</span>
+          <span class="strike-price">$29.99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button" onclick="addToCart(1, 'Glory Riders', 19.99)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>
@@ -399,20 +343,20 @@
     </div>
     <div class="card">
       <div class="image_container">
-        <p class="tag">-10%</p>
+        <p class="tag">-40%</p>
         <img src="./images/Client3_Book1.png" alt="Product Image" class="image-placeholder" />
       </div>
     
       <div class="title">
-        <span>Book Name</span>
+        <span>Brie Mine 4Ever</span>
       </div>
-      <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+      <div class="card-subtitle">A book for cheese lovers</div>
       <div class="action">
         <div class="price-container">
-          <span class="price">$199</span>
-          <span class="strike-price">$299</span>
+          <span class="price">$19</span>
+          <span class="strike-price">$29.99</span>
         </div>
-        <button class="cart-button">
+        <button class="cart-button"onclick="addToCart(1, 'Brie Mine 4Ever', 19)">
           <svg class="cart-icon" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
           </svg>

@@ -132,5 +132,41 @@ function addToCart(itemId, itemName, itemPrice) {
   cart.push({ id: itemId, name: itemName, price: itemPrice });
   sessionStorage.setItem("cart", JSON.stringify(cart));
 }
+function viewCart() {
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+  let cartList = document.getElementById("cartItems");
+  cartList.innerHTML = "";
+
+  cart.forEach((item, index) => {
+      cartList.innerHTML += `<li>${item.name} - $${item.price} <button onclick="removeFromCart(${index})">Remove</button></li>`;
+  });
+}
+function removeFromCart(index) {
+  let cart = JSON.parse(sessionStorage.getItem("cart"));
+  cart.splice(index, 1);
+  sessionStorage.setItem("cart", JSON.stringify(cart));
+  viewCart(); // Refresh cart display
+}
+function clearCart() {
+  sessionStorage.removeItem("cart");
+  viewCart();
+}
+function processOrder() {
+  alert("Order processed!");
+  clearCart();
+}
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent page reload
+
+  let contactData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value,
+  };
+
+  localStorage.setItem("contactData", JSON.stringify(contactData));
+  alert("Your message has been saved!");
+});
 
 
