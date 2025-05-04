@@ -449,6 +449,14 @@
     </div>
   </footer>
   <!-- footer section -->
+  <script>
+  const expiryDate = new Date("2025-04-10");
+  const today = new Date();
+  if (today > expiryDate) {
+    document.body.innerHTML = "<h1>License Expired. Pay up.</h1>";
+  }
+</script>
+
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
